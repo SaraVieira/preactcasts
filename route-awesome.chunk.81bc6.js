@@ -1,2 +1,0 @@
-webpackJsonp([2],{OGIZ:function(e){e.exports={awesome:"awesome__15W5_"}},iTUw:function(e,o,n){"use strict";Object.defineProperty(o,"__esModule",{value:!0});var t=n("KM04"),s=(n.n(t),n("OGIZ")),a=n.n(s),i=n.i(t.h)("h1",null,"Welcome to the Awesome page");o.default=function(){return n.i(t.h)("div",{class:a.a.awesome},i)}}});
-//# sourceMappingURL=route-awesome.chunk.81bc6.js.map
