@@ -1,0 +1,37 @@
+{
+  "name": "scratch-preactcasts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaraVieira/preactcasts.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SaraVieira/preactcasts/issues"
+  },
+  "homepage": "https://github.com/SaraVieira/preactcasts#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.6.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-prettier": "^2.2.0",
+    "preact": "^8.2.1",
+    "prettier": "^1.5.3"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-preact": "^1.1.0",
+    "eslint": "^4.5.0",
+    "eslint-plugin-react": "^7.2.1",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
