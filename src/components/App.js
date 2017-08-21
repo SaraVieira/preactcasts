@@ -1,10 +1,16 @@
-import {h} from 'preact'
+import { h } from 'preact'
+import Router from 'preact-router'
 
-const App = () => (
-    <div>
-        welcome my friends to preact,
-        next lesson we shall make some routes
-    </div>
-)
+import Home from '../routes/Home'
+import User from '../routes/User'
+
+const App = () =>
+    <Router>
+        <Home path="/" />
+        <User path="/user" />
+        <User path="/user/:name" />
+
+        <div default>Sorry Mate , this page does not exist</div>
+    </Router>
 
 export default App
