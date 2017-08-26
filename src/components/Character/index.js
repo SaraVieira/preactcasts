@@ -4,7 +4,9 @@ const Character = ({ character }) =>
     <div>
         <img
             width="60"
-            src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+            src={`${character.thumbnail
+                .path}.${character.thumbnail
+                .extension}`}
         />
         <p>
             {character.name}

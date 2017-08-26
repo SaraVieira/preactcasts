@@ -1,7 +1,7 @@
 import { h, Component } from 'preact'
 import { getAllPeople } from '../../lib/api'
-import Character from '../../components/charecter'
-import FavoriteAction from '../../components/favoriteActions'
+import Character from '../../components/Character'
+import Actions from '../../components/Actions'
 
 class Home extends Component {
     state = {
@@ -10,7 +10,11 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        getAllPeople().then(characters => this.setState({ characters }))
+        getAllPeople().then(characters =>
+            this.setState({
+                characters
+            })
+        )
     }
 
     addFavorite(character) {
@@ -21,9 +25,8 @@ class Home extends Component {
 
     removeFavorite(character) {
         const index = this.state.favorites.indexOf(character)
-
         this.setState({
-            favorites: this.state.favorites.filter((c, i) => i !== index)
+            favorites: this.state.favorites.filter((_, i) => i !== index)
         })
     }
 
@@ -39,20 +42,22 @@ class Home extends Component {
                             </li>
                         )}
                     </ul>
-                    : 'Add You Favorites'}
-
+                    : 'Add Favorites'}
                 {characters && characters.length
                     ? <div>
-                        <h1> Characters </h1>
+                        <h1>Characters</h1>
                         <ul>
                             {characters.map(character =>
                                 <li>
                                     <Character character={character} />
-                                    <FavoriteAction 
-                                        character={character}
+                                    <Actions 
                                         favorites={favorites} 
-                                        addFavorite={() => this.addFavorite(character)} 
-                                        removeFavorite={() => this.removeFavorite(character)} 
+                                        character={character} 
+                                        addCharacter={() =>
+                                            this.addFavorite(character)}                                                    removeCharacter={() =>
+                                            this.removeFavorite(
+                                                character
+                                            )}
                                     />
                                 </li>
                             )}
