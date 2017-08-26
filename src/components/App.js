@@ -2,14 +2,12 @@ import { h } from 'preact'
 import Router from 'preact-router'
 
 import Home from '../routes/Home'
-import User from '../routes/User'
+import Person from '../routes/Person'
 
 const App = () =>
     <Router>
         <Home path="/" />
-        <User path="/user" />
-        <User path="/user/:name" />
-
+        <Person path="/person/:id" />
         <div default>Sorry Mate , this page does not exist</div>
     </Router>
 
